@@ -1,0 +1,3 @@
+[submodule "rpm-nextcloud"]
+	path = rpm-nextcloud
+	url = https://github.com/ledfan/rpm-nextcloud
