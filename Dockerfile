@@ -6,3 +6,7 @@ RUN yum -y update \
 RUN useradd -G mock builder
 # otherwise mock failes because it provides both /usr/sbin/mock and /usr/bin/mock but rejects to run the first
 ENV PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin"
+WORKDIR /data
+USER builder
+CMD rm -rf pkg/*.rpm
+CMD make minimalrpm
